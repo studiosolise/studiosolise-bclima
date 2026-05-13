@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Referências de Sites · BC Lima Engenharia</title>
+  <link rel="stylesheet" href="https://design.studiosolise.com.br/solise-ds.css">
+  <style>
+    /* ── Layout geral ── */
+    body {
+      background: #ffffff;
+    }
+
+    .capa {
+      padding: 5rem 0 4rem;
+      border-bottom: 1px solid var(--cor-cinza);
+      margin-bottom: 4rem;
+    }
+
+    .capa .label {
+      margin-bottom: 1.5rem;
+    }
+
+    .capa h1 {
+      margin: 0 0 1rem 0;
+    }
+
+    .capa .subtitulo-capa {
+      font-family: 'Paralucent', sans-serif;
+      font-weight: 200;
+      font-size: 0.9rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--cor-texto-sec);
+    }
+
+    /* ── Intro ── */
+    .intro {
+      max-width: 680px;
+      margin-bottom: 5rem;
+    }
+
+    .intro p {
+      font-family: 'Paralucent', sans-serif;
+      font-weight: 200;
+      font-size: 1rem;
+      line-height: 1.85;
+      color: var(--cor-texto);
+      margin: 0 0 0.75rem 0;
+    }
+
+    .intro p:last-child { margin: 0; }
+
+    /* ── Categoria ── */
+    .categoria {
+      margin-bottom: 1rem;
+      padding-top: 4rem;
+      border-top: 1px solid var(--cor-cinza);
+    }
+
+    .categoria:first-of-type {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .categoria-label {
+      font-family: 'Paralucent', sans-serif;
+      font-weight: 200;
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--cor-texto-sec);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .categoria-label::before {
+      content: '';
+      display: inline-block;
+      width: 2px;
+      height: 0.9rem;
+      background: var(--cor-preta);
+      flex-shrink: 0;
+    }
+
+    .categoria h2 {
+      margin: 0 0 2.5rem 0;
+    }
+
+    /* ── Card de site ── */
+    .site-card {
+      display: grid;
+      grid-template-columns: 3rem 1fr auto;
+      gap: 0 2rem;
+      align-items: start;
+      padding: 2rem 0;
+      border-top: 1px solid var(--cor-cinza);
+    }
+
+    .site-card:last-child {
+      border-bottom: 1px solid var(--cor-cinza);
+    }
+
+    .site-num {
+      font-family: 'Paralucent', sans-serif;
+      font-weight: 200;
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      color: var(--cor-texto-sec);
+      padding-top: 0.3rem;
+    }
+
+    .site-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .site-nome {
+      font-family: 'Minion Pro', 'Minion Variable Concept', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.35rem;
+      color: var(--cor-texto);
+      line-height: 1.2;
+    }
+
+    .site-url a {
+      font-family: 'Paralucent', sans-serif;
+      font-weight: 200;
+      font-size: 0.8rem;
+      color: var(--cor-texto-sec);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      border-bottom: 1px solid var(--cor-cinza);
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .site-url a:hover {
+      color: var(--cor-preta);
+      border-bottom-color: var(--cor-preta);
+    }
+
+    .site-descricao {
+      font-family: 'Paralucent', sans-serif;
+      font-weight: 200;
+      font-size: 0.9rem;
+      line-height: 1.75;
+      color: var(--cor-texto);
+      margin: 0.25rem 0 0 0;
+      max-width: 600px;
+    }
+
+    .site-tags {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.4rem;
+      min-width: 130px;
+    }
+
+    /* ── Nota final ── */
+    .nota-final {
+      margin-top: 5rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--cor-cinza);
+      max-width: 600px;
+    }
+
+    .nota-final p {
+      font-family: 'Paralucent', sans-serif;
+      font-weight: 200;
+      font-size: 0.88rem;
+      line-height: 1.85;
+      color: var(--cor-texto-sec);
+      margin: 0;
+    }
+
+    /* ── Rodapé ── */
+    .rodape-doc {
+      margin-top: 5rem;
+      padding: 3rem 0;
+      border-top: 1px solid var(--cor-cinza);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .rodape-doc p {
+      font-family: 'Paralucent', sans-serif;
+      font-weight: 200;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--cor-texto-sec);
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+<section class="secao">
+<div class="container">
+
+  <!-- CAPA -->
+  <div class="capa">
+    <img src="https://design.studiosolise.com.br/logos/logo-completo-preto.svg"
+         alt="Studio Solise"
+         style="height: 2.2rem; display: block; margin-bottom: 4rem;">
+    <div class="label">Studio Solise · Identidade Visual</div>
+    <h1>Referências de Sites</h1>
+    <p class="subtitulo-capa">BC Lima Engenharia · 2026</p>
+  </div>
+
+  <!-- INTRO -->
+  <div class="intro">
+    <p>Esta seleção reúne sites de empresas de engenharia, construtoras e incorporadoras com comunicação visual minimalista, moderna e sofisticada. O objetivo é identificar referências de posicionamento e estética que dialoguem com o perfil e os valores da BC Lima Engenharia.</p>
+    <p>Analise cada site observando: paleta de cores, tipografia, estrutura das páginas e tom de comunicação. Anote o que mais chama atenção e o que não tem nada a ver com o que você espera para a BC Lima.</p>
+  </div>
+
+
+  <!-- ─── CATEGORIA 01 ─── -->
+  <div class="categoria">
+    <div class="categoria-label">01 · Studios de Arquitetura</div>
+    <h2>Referências de Posicionamento e Estética</h2>
+
+    <div class="site-card">
+      <div class="site-num">01</div>
+      <div class="site-info">
+        <div class="site-nome">Studio MK27 · Marcio Kogan</div>
+        <div class="site-url"><a href="https://mk27.com" target="_blank">mk27.com</a></div>
+        <p class="site-descricao">Um dos arquitetos brasileiros mais reconhecidos internacionalmente. O site é extremamente limpo: fundo branco, grid de projetos sem ruído, tipografia discreta. O trabalho fala por si. Referência máxima de como um escritório brasileiro comunica alto padrão com silêncio visual.</p>
+      </div>
+      <div class="site-tags">
+        <span class="tag tag-cinza">São Paulo</span>
+        <span class="tag">Arquitetura</span>
+      </div>
+    </div>
+
+    <div class="site-card">
+      <div class="site-num">02</div>
+      <div class="site-info">
+        <div class="site-nome">Isay Weinfeld</div>
+        <div class="site-url"><a href="https://www.isayweinfeld.com" target="_blank">isayweinfeld.com</a></div>
+        <p class="site-descricao">Arquiteto paulistano com projetos residenciais e comerciais de altíssimo padrão no Brasil e no exterior. O site é refinado e objetivo, com portfólio fotográfico impecável. Referência de como sofisticação e elegância se comunicam sem nenhum excesso.</p>
+      </div>
+      <div class="site-tags">
+        <span class="tag tag-cinza">São Paulo</span>
+        <span class="tag">Arquitetura</span>
+      </div>
+    </div>
+
+    <div class="site-card">
+      <div class="site-num">03</div>
+      <div class="site-info">
+        <div class="site-nome">Arthur Casas</div>
+        <div class="site-url"><a href="https://www.arthurcasas.com" target="_blank">arthurcasas.com</a></div>
+        <p class="site-descricao">Arquiteto e designer de interiores com carreira consolidada em projetos de alto padrão no Brasil e no exterior. Site com visual limpo, moderno e bem estruturado. Referência de posicionamento premium para escritórios de arquitetura brasileiros.</p>
+      </div>
+      <div class="site-tags">
+        <span class="tag tag-cinza">São Paulo</span>
+        <span class="tag">Arquitetura</span>
+      </div>
+    </div>
+
+    <div class="site-card">
+      <div class="site-num">04</div>
+      <div class="site-info">
+        <div class="site-nome">Jacobsen Arquitetura</div>
+        <div class="site-url"><a href="https://jacobsenarquitetura.com" target="_blank">jacobsenarquitetura.com</a></div>
+        <p class="site-descricao">Escritório de Paulo Jacobsen, reconhecido por residências de alto padrão e projetos de hospitalidade sofisticados. Site limpo, com fotografia de alto nível e navegação direta. Referência de escritório que comunica exclusividade e refinamento de forma consistente.</p>
+      </div>
+      <div class="site-tags">
+        <span class="tag tag-cinza">Rio de Janeiro</span>
+        <span class="tag">Arquitetura</span>
+      </div>
+    </div>
+
+    <div class="site-card">
+      <div class="site-num">05</div>
+      <div class="site-info">
+        <div class="site-nome">FGMF Arquitetos</div>
+        <div class="site-url"><a href="https://www.fgmf.com.br" target="_blank">fgmf.com.br</a></div>
+        <p class="site-descricao">Escritório paulistano com forte atuação em projetos corporativos, residenciais e de uso misto. Site bem estruturado, visual moderno e comunicação objetiva. Referência de escritório que atua no mercado corporativo e de alto padrão com presença digital cuidadosa.</p>
+      </div>
+      <div class="site-tags">
+        <span class="tag tag-cinza">São Paulo</span>
+        <span class="tag">Arquitetura</span>
+      </div>
+    </div>
+
+    <div class="site-card">
+      <div class="site-num">06</div>
+      <div class="site-info">
+        <div class="site-nome">Triptyque</div>
+        <div class="site-url"><a href="https://www.triptyque.com" target="_blank">triptyque.com</a></div>
+        <p class="site-descricao">Escritório com sede em São Paulo e Paris, com projetos que circulam entre o Brasil e a Europa. O site tem uma estética mais ousada, com influências do design editorial europeu. Referência de como um escritório brasileiro se posiciona com sofisticação e identidade visual forte.</p>
+      </div>
+      <div class="site-tags">
+        <span class="tag tag-cinza">São Paulo · Paris</span>
+        <span class="tag">Arquitetura</span>
+      </div>
+    </div>
+
+    <div class="site-card">
+      <div class="site-num">07</div>
+      <div class="site-info">
+        <div class="site-nome">Felipe Hess</div>
+        <div class="site-url"><a href="https://www.felipehess.com.br" target="_blank">felipehess.com.br</a></div>
+        <p class="site-descricao">Arquiteto paulistano com projetos residenciais de alto padrão, reconhecido por uma arquitetura cuidadosa e atenta aos materiais. Site minimalista, portfólio limpo e tipografia delicada. Referência de escritório que comunica excelência e exclusividade com muito pouco recurso visual.</p>
+      </div>
+      <div class="site-tags">
+        <span class="tag tag-cinza">São Paulo</span>
+        <span class="tag">Arquitetura</span>
+      </div>
+    </div>
+
+    <div class="site-card">
+      <div class="site-num">08</div>
+      <div class="site-info">
+        <div class="site-nome">Brunete Fraccaroli</div>
+        <div class="site-url"><a href="https://www.brunetefraccaroli.com.br" target="_blank">brunetefraccaroli.com.br</a></div>
+        <p class="site-descricao">Arquiteta e designer de interiores com projetos de alto padrão no Brasil e no exterior. Site com fotografia de alto nível, paleta neutra e estrutura limpa. Referência de como um escritório do segmento premium equilibra arquitetura e interiores em uma comunicação visual coesa.</p>
+      </div>
+      <div class="site-tags">
+        <span class="tag tag-cinza">São Paulo</span>
+        <span class="tag">Arquitetura · Interiores</span>
+      </div>
+    </div>
+
+    <div class="site-card">
+      <div class="site-num">09</div>
+      <div class="site-info">
+        <div class="site-nome">RMAA · Reinach Mendonça Arquitetos</div>
+        <div class="site-url"><a href="https://www.rmaa.com.br" target="_blank">rmaa.com.br</a></div>
+        <p class="site-descricao">Escritório fundado em 1987, com projetos residenciais e corporativos de alto padrão em São Paulo. Site institucional objetivo, portfólio bem estruturado e comunicação sóbria. Referência de escritório com história e solidez que mantém presença digital limpa e profissional.</p>
+      </div>
+      <div class="site-tags">
+        <span class="tag tag-cinza">São Paulo</span>
+        <span class="tag">Arquitetura</span>
+      </div>
+    </div>
+
+    <div class="site-card">
+      <div class="site-num">10</div>
+      <div class="site-info">
+        <div class="site-nome">SPBR Arquitetos · Angelo Bucci</div>
+        <div class="site-url"><a href="https://www.spbr.arq.br" target="_blank">spbr.arq.br</a></div>
+        <p class="site-descricao">Escritório fundado e dirigido por Angelo Bucci, com reconhecimento internacional em prêmios e publicações. Site minimalista e limpo, com foco em portfólio. Referência de escritório que combina rigor intelectual e excelência projetual com uma presença digital discreta e elegante.</p>
+      </div>
+      <div class="site-tags">
+        <span class="tag tag-cinza">São Paulo</span>
+        <span class="tag">Arquitetura</span>
+      </div>
+    </div>
+
+    <div class="site-card">
+      <div class="site-num">11</div>
+      <div class="site-info">
+        <div class="site-nome">Apiacás Arquitetos</div>
+        <div class="site-url"><a href="https://www.apiacasarquitetos.com.br" target="_blank">apiacasarquitetos.com.br</a></div>
+        <p class="site-descricao">Escritório fundado em 2000, com portfólio diversificado em projetos residenciais, comerciais e culturais. Site com estética clean, muito espaço em branco e grid de portfólio direto. Referência de escritório que comunica competência e modernidade sem nenhum excesso visual.</p>
+      </div>
+      <div class="site-tags">
+        <span class="tag tag-cinza">São Paulo</span>
+        <span class="tag">Arquitetura</span>
+      </div>
+    </div>
+
+    <div class="site-card">
+      <div class="site-num">12</div>
+      <div class="site-info">
+        <div class="site-nome">CR2 Arquitetura</div>
+        <div class="site-url"><a href="https://www.cr2arquitetura.com.br" target="_blank">cr2arquitetura.com.br</a></div>
+        <p class="site-descricao">Escritório de arquitetura com projetos residenciais e corporativos de alto padrão em São Paulo. Site com apresentação visual em carrossel de imagens, estrutura simples e navegação limpa. Referência de escritório que aposta na força da fotografia para comunicar a qualidade do trabalho.</p>
+      </div>
+      <div class="site-tags">
+        <span class="tag tag-cinza">São Paulo</span>
+        <span class="tag">Arquitetura</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ─── CATEGORIA 02 ─── -->
+  <div class="categoria">
+    <div class="categoria-label">02 · Design de Interiores</div>
+    <h2>Estética, Requinte e Comunicação Visual</h2>
+
+    <div class="site-card">
+      <div class="site-num">13</div>
+      <div class="site-info">
+        <div class="site-nome">Fernanda Marques</div>
+        <div class="site-url"><a href="https://www.fernandamarques.com.br" target="_blank">fernandamarques.com.br</a></div>
+        <p class="site-descricao">Uma das designers de interiores mais reconhecidas do Brasil, com projetos para clientes de altíssimo padrão. Site sofisticado e elegante, com fotografia de alto nível e comunicação que transmite exclusividade. Referência de como posicionar uma empresa premium voltada para o público A.</p>
+      </div>
+      <div class="site-tags">
+        <span class="tag tag-cinza">São Paulo</span>
+        <span class="tag">Design de Interiores</span>
+      </div>
+    </div>
+
+    <div class="site-card">
+      <div class="site-num">14</div>
+      <div class="site-info">
+        <div class="site-nome">Guilherme Torres</div>
+        <div class="site-url"><a href="https://www.guilhermetorres.com" target="_blank">guilhermetorres.com</a></div>
+        <p class="site-descricao">Arquiteto e designer com forte presença no mercado de alto padrão, com projetos publicados nas principais revistas de arquitetura e decoração do Brasil. Site com detalhes minimalistas e paleta de materiais rica, mas contida. Referência de como um profissional do segmento premium constrói autoridade digital.</p>
+      </div>
+      <div class="site-tags">
+        <span class="tag tag-cinza">São Paulo</span>
+        <span class="tag">Arquitetura · Interiores</span>
+      </div>
+    </div>
+
+    <div class="site-card">
+      <div class="site-num">15</div>
+      <div class="site-info">
+        <div class="site-nome">Marília Veiga Interiores</div>
+        <div class="site-url"><a href="https://www.mariliaveiga.com.br" target="_blank">mariliaveiga.com.br</a></div>
+        <p class="site-descricao">Escritório de design de interiores com projetos residenciais, corporativos e expositivos de alto padrão em São Paulo. Site com paleta neutra, fotografia cuidadosa e estrutura limpa. Referência de como comunicar sofisticação e exclusividade com simplicidade e elegância.</p>
+      </div>
+      <div class="site-tags">
+        <span class="tag tag-cinza">São Paulo</span>
+        <span class="tag">Design de Interiores</span>
+      </div>
+    </div>
+
+    <div class="site-card">
+      <div class="site-num">16</div>
+      <div class="site-info">
+        <div class="site-nome">Viterbo Interior Design</div>
+        <div class="site-url"><a href="https://www.viterbointeriordesign.com" target="_blank">viterbointeriordesign.com</a></div>
+        <p class="site-descricao">Escritório de design de interiores de luxo com projetos no Brasil e em Portugal. Site com visual refinado, fotografia impecável e navegação muito limpa. Referência de posicionamento no segmento de altíssimo padrão: cada elemento da comunicação transmite exclusividade e cuidado.</p>
+      </div>
+      <div class="site-tags">
+        <span class="tag tag-cinza">São Paulo · Lisboa</span>
+        <span class="tag">Design de Interiores</span>
+      </div>
+    </div>
+
+    <div class="site-card">
+      <div class="site-num">17</div>
+      <div class="site-info">
+        <div class="site-nome">Studio Roca</div>
+        <div class="site-url"><a href="https://www.studioroca.com.br" target="_blank">studioroca.com.br</a></div>
+        <p class="site-descricao">Escritório de arquitetura e interiores com projetos residenciais sofisticados em São Paulo e Rio de Janeiro. Site com portfólio limpo, tipografia cuidadosa e paleta neutra. Referência de escritório que comunica modernidade e requinte de forma direta e sem excessos.</p>
+      </div>
+      <div class="site-tags">
+        <span class="tag tag-cinza">São Paulo · Rio de Janeiro</span>
+        <span class="tag">Arquitetura · Interiores</span>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+  <!-- ─── CATEGORIA 03 ─── -->
+  <div class="categoria">
+    <div class="categoria-label">03 · Arquitetura e Interiores</div>
+    <h2>Mais Referências</h2>
+
+    <div class="site-card">
+      <div class="site-num">18</div>
+      <div class="site-info">
+        <div class="site-nome">Três Arquitetura</div>
+        <div class="site-url"><a href="https://www.tresarq.com.br" target="_blank">tresarq.com.br</a></div>
+        <p class="site-descricao">Escritório com atuação em arquitetura, interiores e incorporação, com projetos residenciais e comerciais sofisticados. Site minimalista com portfólio bem apresentado e navegação limpa. Referência interessante por atuar nos três segmentos relevantes para a BC Lima: residencial, comercial e incorporação.</p>
+      </div>
+      <div class="site-tags">
+        <span class="tag tag-cinza">Brasil</span>
+        <span class="tag">Arquitetura · Interiores</span>
+      </div>
+    </div>
+
+    <div class="site-card">
+      <div class="site-num">19</div>
+      <div class="site-info">
+        <div class="site-nome">Débora Aguiar</div>
+        <div class="site-url"><a href="https://www.deboraaguiar.com.br" target="_blank">deboraaguiar.com.br</a></div>
+        <p class="site-descricao">Uma das designers de interiores mais reconhecidas do Brasil, com projetos de altíssimo padrão para clientes exigentes. Site com visual sofisticado, fotografia impecável e comunicação que transmite exclusividade e requinte. Referência de posicionamento premium no segmento de interiores de luxo.</p>
+      </div>
+      <div class="site-tags">
+        <span class="tag tag-cinza">São Paulo</span>
+        <span class="tag">Design de Interiores</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOTA FINAL -->
+  <div class="nota-final">
+    <p>Ao navegar em cada site, observe especialmente as cores usadas, a tipografia, como a empresa apresenta seus projetos e o tom de comunicação. Anote o que mais agrada e o que não tem nada a ver com o que você espera para a BC Lima.</p>
+  </div>
+
+  <!-- RODAPÉ -->
+  <div class="rodape-doc">
+    <p>BC Lima Engenharia · Identidade Visual · 2025</p>
+    <img src="https://design.studiosolise.com.br/logos/logo-completo-preto.svg"
+         alt="Studio Solise"
+         style="height: 1.8rem; display: block;">
+  </div>
+
+</div>
+</section>
+</body>
+</html>
