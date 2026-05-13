@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estrutura do Site — BC Lima Engenharia</title>
+  <link rel="stylesheet" href="https://design.studiosolise.com.br/solise-ds.css">
+  <style>
+    body { background: #fff; color: var(--cor-texto); }
+
+    /* Topo */
+    .topo {
+      padding: 4.5rem 0 4rem;
+      border-bottom: 1px solid var(--cor-cinza);
+      margin-bottom: 4rem;
+    }
+    .topo-kicker {
+      font-family: 'Paralucent', sans-serif;
+      font-weight: 200;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--cor-texto-sec);
+      margin-bottom: 1.5rem;
+    }
+    .topo h1 {
+      font-family: 'Minion Pro', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 2.8rem;
+      color: var(--cor-texto);
+      margin: 0 0 2rem;
+      line-height: 1.2;
+    }
+    .topo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem 3rem;
+      max-width: 820px;
+    }
+    @media (max-width: 640px) { .topo-grid { grid-template-columns: 1fr; } }
+    .topo-bloco-label {
+      font-family: 'Paralucent', sans-serif;
+      font-weight: 200;
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--cor-texto-sec);
+      margin-bottom: 0.5rem;
+    }
+    .topo-bloco-texto {
+      font-family: 'Paralucent', sans-serif;
+      font-weight: 200;
+      font-size: 0.9rem;
+      line-height: 1.75;
+      color: var(--cor-texto);
+    }
+    .topo-intro-completo {
+      margin-top: 2.5rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--cor-cinza);
+      font-family: 'Paralucent', sans-serif;
+      font-weight: 200;
+      font-size: 0.92rem;
+      line-height: 1.8;
+      color: var(--cor-texto-sec);
+      max-width: 680px;
+    }
+
+    /* Seção */
+    .secao-site {
+      margin-bottom: 3.5rem;
+      border: 1px solid var(--cor-cinza);
+      border-radius: 2px;
+    }
+    .secao-site.editando-secao {
+      border-color: #b0c8b0;
+      box-shadow: 0 0 0 3px #f0f7f0;
+    }
+
+    /* Cabeçalho da seção */
+    .secao-cabecalho {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding: 1.75rem 2rem;
+      background: var(--cor-off-white);
+      border-bottom: 1px solid var(--cor-cinza);
+    }
+    .secao-cabecalho-esq {
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+    }
+    .secao-numero {
+      font-family: 'Paralucent', sans-serif;
+      font-weight: 200;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cor-texto-sec);
+      padding-top: 0.3rem;
+      white-space: nowrap;
+    }
+    .secao-nome {
+      font-family: 'Minion Pro', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.35rem;
+      color: var(--cor-texto);
+      display: block;
+      outline: none;
+    }
+    .secao-nome[contenteditable="true"] {
+      border-bottom: 1px dashed var(--cor-cinza);
+    }
+    .secao-desc {
+      font-family: 'Paralucent', sans-serif;
+      font-weight: 200;
+      font-size: 0.8rem;
+      color: var(--cor-texto-sec);
+      margin-top: 0.3rem;
+      line-height: 1.5;
+    }
+    .secao-acoes {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .btn-sec {
+      font-family: 'Paralucent', sans-serif;
+      font-weight: 200;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.45rem 1rem;
+      border: 1px solid var(--cor-cinza);
+      background: #fff;
+      color: var(--cor-texto-sec);
+      cursor: pointer;
+      border-radius: 2px;
+      white-space: nowrap;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .btn-sec:hover { border-color: var(--cor-texto-sec); color: var(--cor-texto); }
+    .btn-sec.primario { background: var(--cor-preta); color: #fff; border-color: var(--cor-preta); }
+    .btn-sec.primario:hover { opacity: 0.8; }
+
+    /* Contexto estratégico da seção */
+    .secao-contexto {
+      padding: 1.75rem 2rem;
+      border-bottom: 1px solid var(--cor-cinza);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem 2.5rem;
+      background: #fdfdf9;
+    }
+    @media (max-width: 640px) { .secao-contexto { grid-template-columns: 1fr; } }
+    .contexto-bloco {}
+    .contexto-label {
+      font-family: 'Paralucent', sans-serif;
+      font-weight: 200;
+      font-size: 0.67rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--cor-texto-sec);
+      margin-bottom: 0.5rem;
+    }
+    .contexto-texto {
+      font-family: 'Paralucent', sans-serif;
+      font-weight: 200;
+      font-size: 0.88rem;
+      line-height: 1.75;
+      color: var(--cor-texto);
+    }
+    .contexto-lista {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .contexto-lista li {
+      font-family: 'Paralucent', sans-serif;
+      font-weight: 200;
+      font-size: 0.88rem;
+      line-height: 1.7;
+      color: var(--cor-texto);
+      padding-left: 1rem;
+      position: relative;
+    }
+    .contexto-lista li::before {
+      content: '|';
+      position: absolute;
+      left: 0;
+      color: var(--cor-cinza);
+      font-weight: 200;
+    }
+    .contexto-bloco.span-2 { grid-column: span 2; }
+    @media (max-width: 640px) { .contexto-bloco.span-2 { grid-column: span 1; } }
+
+    /* Corpo editável */
+    .secao-corpo {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem 2.5rem;
+    }
+    @media (max-width: 640px) { .secao-corpo { grid-template-columns: 1fr; } }
+
+    .campo-bloco { display: flex; flex-direction: column; gap: 0.45rem; }
+    .campo-bloco.span-2 { grid-column: span 2; }
+    @media (max-width: 640px) { .campo-bloco.span-2 { grid-column: span 1; } }
+
+    .campo-label {
+      font-family: 'Paralucent', sans-serif;
+      font-weight: 200;
+      font-size: 0.67rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--cor-texto-sec);
+    }
+    .campo-valor {
+      font-family: 'Paralucent', sans-serif;
+      font-weight: 200;
+      font-size: 0.92rem;
+      line-height: 1.7;
+      color: var(--cor-texto);
+      outline: none;
+      min-height: 1.4em;
+    }
+    .campo-valor[contenteditable="true"] {
+      border-bottom: 1px dashed var(--cor-cinza);
+      padding-bottom: 3px;
+    }
+    .campo-valor[contenteditable="true"]:focus { border-bottom-color: #999; }
+    .campo-nota {
+      font-family: 'Paralucent', sans-serif;
+      font-weight: 200;
+      font-size: 0.8rem;
+      color: var(--cor-texto-sec);
+      background: var(--cor-off-white);
+      border-left: 2px solid var(--cor-cinza);
+      padding: 0.6rem 0.9rem;
+      line-height: 1.6;
+    }
+
+    /* Divisor de grupo */
+    .grupo-label {
+      font-family: 'Paralucent', sans-serif;
+      font-weight: 200;
+      font-size: 0.68rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--cor-texto-sec);
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--cor-cinza);
+      margin: 0 0 1.5rem;
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(0.5rem);
+      background: var(--cor-preta);
+      color: #fff;
+      font-family: 'Paralucent', sans-serif;
+      font-weight: 200;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      padding: 0.7rem 1.4rem;
+      border-radius: 2px;
+      opacity: 0;
+      transition: opacity 0.25s, transform 0.25s;
+      pointer-events: none;
+      z-index: 200;
+    }
+    .toast.visivel { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    /* Rodapé */
+    .rodape {
+      border-top: 1px solid var(--cor-cinza);
+      padding: 2.5rem 0;
+      margin-top: 5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .rodape img { height: 16px; opacity: 0.4; }
+    .rodape-texto {
+      font-family: 'Paralucent', sans-serif;
+      font-weight: 200;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--cor-texto-sec);
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Topo -->
+  <div class="topo">
+    <div class="topo-kicker">BC Lima Engenharia · Studio Solise · 2026</div>
+    <h1>Proposta de Estrutura<br>do Site</h1>
+
+    <div class="topo-grid">
+      <div>
+        <div class="topo-bloco-label">Objetivo do documento</div>
+        <div class="topo-bloco-texto">Apresentar a estrutura de páginas e o conteúdo sugerido para o site institucional da BC Lima Engenharia. Cada seção foi pensada para o perfil do público-alvo: clientes de alto padrão que buscam confiança, clareza e evidência de qualidade antes de tomar qualquer decisão.</div>
+      </div>
+      <div>
+        <div class="topo-bloco-label">Como usar este documento</div>
+        <div class="topo-bloco-texto">Leia a proposta completa, incluindo o contexto estratégico de cada seção. Use o botão Editar para ajustar os textos sugeridos conforme a realidade da empresa. Tudo que estiver em cinza claro é orientação interna e não aparece no site final.</div>
+      </div>
+      <div>
+        <div class="topo-bloco-label">Tipo de site</div>
+        <div class="topo-bloco-texto">Landing page institucional de página única. Um site limpo, direto, que comunica quem é a empresa e convida ao contato.</div>
+      </div>
+      <div>
+        <div class="topo-bloco-label">Público-alvo</div>
+        <div class="topo-bloco-texto">Pessoas físicas e empresas de alto poder aquisitivo em Brasília: advogados, executivos, empresários. Clientes que pesquisam antes de decidir e valorizam seriedade, clareza e histórico comprovado.</div>
+      </div>
+    </div>
+
+    <p class="topo-intro-completo">
+      O site da BC Lima não precisa ser extenso. Precisa ser preciso. O visitante chega com uma dúvida específica: esta empresa tem capacidade técnica para o meu projeto? A estrutura proposta responde a essa pergunta em cada seção, de forma progressiva, até o convite ao contato.
+    </p>
+  </div>
+
+  <!-- ======= 01 ABERTURA ======= -->
+  <div class="secao-site" id="sec-1">
+    <div class="secao-cabecalho">
+      <div class="secao-cabecalho-esq">
+        <div class="secao-numero">01</div>
+        <div>
+          <span class="secao-nome" id="nome-1" contenteditable="false">Abertura</span>
+          <div class="secao-desc">Primeira impressão. Define posicionamento em poucas palavras.</div>
+        </div>
+      </div>
+      <div class="secao-acoes" id="acoes-1">
+        <button class="btn-sec" onclick="editarSecao('1')">Editar</button>
+      </div>
+    </div>
+
+    <div class="secao-contexto">
+      <div class="contexto-bloco">
+        <div class="contexto-label">Por que esta seção existe</div>
+        <div class="contexto-texto">O visitante decide em menos de cinco segundos se vai continuar lendo. A abertura precisa responder duas perguntas imediatas: quem é essa empresa e para quem ela trabalha. Tudo na tela precisa comunicar alto padrão antes de qualquer palavra.</div>
+      </div>
+      <div class="contexto-bloco">
+        <div class="contexto-label">O que o cliente precisa fornecer</div>
+        <ul class="contexto-lista">
+          <li>Fotografia de obra entregue (alta resolução, horizontal)</li>
+          <li>Confirmação do título e subtítulo ou texto próprio</li>
+          <li>Número de WhatsApp para o botão de contato</li>
+        </ul>
+      </div>
+      <div class="contexto-bloco span-2">
+        <div class="contexto-label">Orientação de imagem</div>
+        <div class="contexto-texto">A foto de abertura é o elemento mais importante da página. Deve mostrar o nível de acabamento da empresa: um ambiente interno bem iluminado, uma fachada limpa ou um detalhe construtivo de qualidade. Fotos de canteiro de obra funcionam mal aqui. A imagem precisa vender o resultado, não o processo.</div>
+      </div>
+    </div>
+
+    <div class="secao-corpo">
+      <div class="campo-bloco">
+        <div class="campo-label">Título principal</div>
+        <div class="campo-valor" id="val-1-1" contenteditable="false">Engenharia de alto padrão em Brasília.</div>
+        <div class="campo-nota">Primeira frase que o visitante lê. Curta, direta, sem jargão técnico.</div>
+      </div>
+      <div class="campo-bloco">
+        <div class="campo-label">Subtítulo</div>
+        <div class="campo-valor" id="val-1-2" contenteditable="false">Construção e reforma de imóveis residenciais e comerciais em Brasília. Excelência técnica em cada etapa, do projeto à entrega.</div>
+        <div class="campo-nota">Complementa o título com mais contexto. Até 3 linhas.</div>
+      </div>
+      <div class="campo-bloco">
+        <div class="campo-label">Texto do botão</div>
+        <div class="campo-valor" id="val-1-3" contenteditable="false">Fale com a gente</div>
+        <div class="campo-nota">Leva ao WhatsApp ou ao formulário de contato no final da página.</div>
+      </div>
+      <div class="campo-bloco">
+        <div class="campo-label">Imagem de destaque</div>
+        <div class="campo-valor" id="val-1-4" contenteditable="false">Foto de obra entregue: ambiente interno com acabamento refinado, ou fachada limpa.</div>
+        <div class="campo-nota">Horizontal, alta resolução. Fornecida pela BC Lima.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= 02 DIFERENCIAIS ======= -->
+  <div class="secao-site" id="sec-2">
+    <div class="secao-cabecalho">
+      <div class="secao-cabecalho-esq">
+        <div class="secao-numero">02</div>
+        <div>
+          <span class="secao-nome" id="nome-2" contenteditable="false">Diferenciais</span>
+          <div class="secao-desc">Por que a BC Lima. Três ou quatro razões concretas para confiar na empresa.</div>
+        </div>
+      </div>
+      <div class="secao-acoes" id="acoes-2">
+        <button class="btn-sec" onclick="editarSecao('2')">Editar</button>
+      </div>
+    </div>
+
+    <div class="secao-contexto">
+      <div class="contexto-bloco">
+        <div class="contexto-label">Por que esta seção existe</div>
+        <div class="contexto-texto">Após a abertura, o visitante começa a questionar: esta empresa é confiável? Esta seção responde antes que ele precise perguntar. Cada bloco é uma afirmação direta, com base real. Não é publicidade. É argumento.</div>
+      </div>
+      <div class="contexto-bloco">
+        <div class="contexto-label">Como apresentar</div>
+        <div class="contexto-texto">Três ou quatro blocos, cada um com título curto e uma descrição de duas a três linhas. Os blocos ficam lado a lado na tela, com ícone ou barra à esquerda. O visual limpo reforça a seriedade do conteúdo.</div>
+      </div>
+      <div class="contexto-bloco span-2">
+        <div class="contexto-label">Atenção</div>
+        <div class="contexto-texto">Os diferenciais precisam ser reais e verificáveis. Evite afirmações genéricas como "qualidade garantida" ou "comprometimento total". O público-alvo da BC Lima tem familiaridade com o mercado de construção e identifica rapidamente quando um texto é vago. Cada diferencial deve ser algo que a empresa pode defender em uma conversa.</div>
+      </div>
+    </div>
+
+    <div class="secao-corpo">
+      <div class="campo-bloco">
+        <div class="campo-label">Diferencial 1 — título</div>
+        <div class="campo-valor" id="val-2-1" contenteditable="false">Gestão integrada de obra</div>
+      </div>
+      <div class="campo-bloco">
+        <div class="campo-label">Diferencial 1 — descrição</div>
+        <div class="campo-valor" id="val-2-2" contenteditable="false">Controle rigoroso de cada etapa, da planta ao acabamento. Um único ponto de contato do início ao fim.</div>
+      </div>
+      <div class="campo-bloco">
+        <div class="campo-label">Diferencial 2 — título</div>
+        <div class="campo-valor" id="val-2-3" contenteditable="false">Transparência no processo</div>
+      </div>
+      <div class="campo-bloco">
+        <div class="campo-label">Diferencial 2 — descrição</div>
+        <div class="campo-valor" id="val-2-4" contenteditable="false">Relatórios periódicos e comunicação direta com o proprietário durante toda a execução da obra.</div>
+      </div>
+      <div class="campo-bloco">
+        <div class="campo-label">Diferencial 3 — título</div>
+        <div class="campo-valor" id="val-2-5" contenteditable="false">Alto padrão de execução</div>
+      </div>
+      <div class="campo-bloco">
+        <div class="campo-label">Diferencial 3 — descrição</div>
+        <div class="campo-valor" id="val-2-6" contenteditable="false">Materiais selecionados, equipe técnica especializada e prazo cumprido. Sem atalhos na execução.</div>
+      </div>
+      <div class="campo-bloco">
+        <div class="campo-label">Diferencial 4 — título (opcional)</div>
+        <div class="campo-valor" id="val-2-7" contenteditable="false">A confirmar</div>
+        <div class="campo-nota">Pode ser: tempo de mercado, número de obras entregues, área de atuação específica. Confirmar com o cliente.</div>
+      </div>
+      <div class="campo-bloco">
+        <div class="campo-label">Diferencial 4 — descrição (opcional)</div>
+        <div class="campo-valor" id="val-2-8" contenteditable="false">A confirmar com o cliente.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= 03 SERVIÇOS ======= -->
+  <div class="secao-site" id="sec-3">
+    <div class="secao-cabecalho">
+      <div class="secao-cabecalho-esq">
+        <div class="secao-numero">03</div>
+        <div>
+          <span class="secao-nome" id="nome-3" contenteditable="false">Serviços</span>
+          <div class="secao-desc">O que a empresa oferece. Lista direta, sem excesso de texto.</div>
+        </div>
+      </div>
+      <div class="secao-acoes" id="acoes-3">
+        <button class="btn-sec" onclick="editarSecao('3')">Editar</button>
+      </div>
+    </div>
+
+    <div class="secao-contexto">
+      <div class="contexto-bloco">
+        <div class="contexto-label">Por que esta seção existe</div>
+        <div class="contexto-texto">O visitante precisa confirmar que a empresa faz o que ele procura. Esta seção responde em segundos, sem obrigar a leitura de parágrafos. A lista de serviços deve ser direta e cobrir os tipos de projeto que a BC Lima realmente atende.</div>
+      </div>
+      <div class="contexto-bloco">
+        <div class="contexto-label">O que o cliente precisa fornecer</div>
+        <ul class="contexto-lista">
+          <li>Lista completa e revisada dos serviços prestados</li>
+          <li>Se houver serviços que não quer listar publicamente, indicar quais</li>
+          <li>Confirmar se atendem apenas Brasília ou outras localidades</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="secao-corpo">
+      <div class="campo-bloco">
+        <div class="campo-label">Título da seção</div>
+        <div class="campo-valor" id="val-3-1" contenteditable="false">O que fazemos</div>
+      </div>
+      <div class="campo-bloco">
+        <div class="campo-label">Frase de apoio</div>
+        <div class="campo-valor" id="val-3-2" contenteditable="false">Cada projeto é tratado como único. Nossa equipe acompanha todas as fases: projeto, execução e entrega.</div>
+      </div>
+      <div class="campo-bloco span-2">
+        <div class="campo-label">Serviços (separados por ponto médio ·)</div>
+        <div class="campo-valor" id="val-3-3" contenteditable="false">Construção residencial de alto padrão · Construção comercial · Reformas e ampliações · Gerenciamento de obras · Projetos executivos</div>
+        <div class="campo-nota">Revise e ajuste conforme a atuação real da empresa. Se algum serviço tiver destaque maior, podemos dar mais espaço a ele no layout.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= 04 PROJETOS ======= -->
+  <div class="secao-site" id="sec-4">
+    <div class="secao-cabecalho">
+      <div class="secao-cabecalho-esq">
+        <div class="secao-numero">04</div>
+        <div>
+          <span class="secao-nome" id="nome-4" contenteditable="false">Projetos</span>
+          <div class="secao-desc">Portfólio visual. A seção de maior impacto na decisão do cliente.</div>
+        </div>
+      </div>
+      <div class="secao-acoes" id="acoes-4">
+        <button class="btn-sec" onclick="editarSecao('4')">Editar</button>
+      </div>
+    </div>
+
+    <div class="secao-contexto">
+      <div class="contexto-bloco">
+        <div class="contexto-label">Por que esta seção existe</div>
+        <div class="contexto-texto">Para o público de alto padrão, nenhum argumento substitui ver o resultado. O portfólio é onde a empresa prova o que afirmou nas seções anteriores. Uma foto boa de obra entregue vale mais do que qualquer parágrafo de apresentação.</div>
+      </div>
+      <div class="contexto-bloco">
+        <div class="contexto-label">O que o cliente precisa fornecer</div>
+        <ul class="contexto-lista">
+          <li>Fotos profissionais de 3 a 6 obras concluídas</li>
+          <li>Nome ou descrição de cada projeto (pode ser genérico: "Residência, Lago Sul")</li>
+          <li>Tipo de projeto e cidade de cada obra</li>
+          <li>Se houver acordos de confidencialidade com proprietários, indicar quais projetos não podem aparecer</li>
+        </ul>
+      </div>
+      <div class="contexto-bloco span-2">
+        <div class="contexto-label">Orientação de fotografia</div>
+        <div class="contexto-texto">Fotos amadoras comprometem a credibilidade de toda a página. Se a BC Lima ainda não tem fotografias profissionais das obras, recomendamos contratar um fotógrafo de arquitetura antes de lançar o site. Não é necessário fotografar muitos projetos: três obras bem fotografadas são mais eficazes do que dez fotos medianas.</div>
+      </div>
+    </div>
+
+    <div class="secao-corpo">
+      <div class="campo-bloco">
+        <div class="campo-label">Título da seção</div>
+        <div class="campo-valor" id="val-4-1" contenteditable="false">Obras entregues</div>
+      </div>
+      <div class="campo-bloco">
+        <div class="campo-label">Formato visual</div>
+        <div class="campo-valor" id="val-4-2" contenteditable="false">Grade com 3 a 6 obras. Cada uma com foto, nome do projeto, tipo e cidade.</div>
+        <div class="campo-nota">Se houver poucas obras para mostrar, podemos usar um layout com fotos maiores para compensar a quantidade.</div>
+      </div>
+      <div class="campo-bloco">
+        <div class="campo-label">Projeto 1</div>
+        <div class="campo-valor" id="val-4-3" contenteditable="false">Nome do projeto · Residencial · Brasília, DF</div>
+      </div>
+      <div class="campo-bloco">
+        <div class="campo-label">Projeto 2</div>
+        <div class="campo-valor" id="val-4-4" contenteditable="false">Nome do projeto · Comercial · Brasília, DF</div>
+      </div>
+      <div class="campo-bloco">
+        <div class="campo-label">Projeto 3</div>
+        <div class="campo-valor" id="val-4-5" contenteditable="false">Nome do projeto · Residencial · Brasília, DF</div>
+      </div>
+      <div class="campo-bloco">
+        <div class="campo-label">Projeto 4 (opcional)</div>
+        <div class="campo-valor" id="val-4-6" contenteditable="false">Nome do projeto · tipo · cidade</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= 05 SOBRE ======= -->
+  <div class="secao-site" id="sec-5">
+    <div class="secao-cabecalho">
+      <div class="secao-cabecalho-esq">
+        <div class="secao-numero">05</div>
+        <div>
+          <span class="secao-nome" id="nome-5" contenteditable="false">Sobre a empresa</span>
+          <div class="secao-desc">Quem está por trás da BC Lima. Credibilidade pela trajetória, sem expor nomes.</div>
+        </div>
+      </div>
+      <div class="secao-acoes" id="acoes-5">
+        <button class="btn-sec" onclick="editarSecao('5')">Editar</button>
+      </div>
+    </div>
+
+    <div class="secao-contexto">
+      <div class="contexto-bloco">
+        <div class="contexto-label">Por que esta seção existe</div>
+        <div class="contexto-texto">Empresas novas precisam de credibilidade extra. A BC Lima é recente como marca, mas a experiência de quem a fundou não é. Esta seção comunica essa trajetória sem nomear pessoas: transmite solidez pela competência acumulada, não pelo tempo de CNPJ.</div>
+      </div>
+      <div class="contexto-bloco">
+        <div class="contexto-label">Decisão de posicionamento</div>
+        <div class="contexto-texto">Por razões estratégicas, os sócios não são identificados pelo nome no site. A comunicação foca na experiência coletiva da equipe e no histórico técnico da empresa. Essa abordagem é comum em escritórios de alto padrão e reforça o posicionamento institucional.</div>
+      </div>
+      <div class="contexto-bloco">
+        <div class="contexto-label">O que o cliente precisa fornecer</div>
+        <ul class="contexto-lista">
+          <li>Ano de fundação da empresa</li>
+          <li>Número de obras entregues (se quiser divulgar)</li>
+          <li>Área total construída (opcional)</li>
+          <li>Foto da equipe ou de contexto de obra para humanizar</li>
+          <li>Texto próprio sobre a empresa, se preferir não usar o sugerido</li>
+        </ul>
+      </div>
+      <div class="contexto-bloco">
+        <div class="contexto-label">Sobre a foto</div>
+        <div class="contexto-texto">Uma imagem da equipe em campo ou em reunião de obra humaniza a marca sem identificar indivíduos. Funciona bem quando há mais de uma pessoa na foto, em um contexto de trabalho real.</div>
+      </div>
+    </div>
+
+    <div class="secao-corpo">
+      <div class="campo-bloco span-2">
+        <div class="campo-label">Texto institucional</div>
+        <div class="campo-valor" id="val-5-1" contenteditable="false">A BC Lima Engenharia foi fundada por profissionais com trajetória consolidada em obras de alta complexidade. Essa experiência acumulada se traduz em rigor técnico, gestão precisa e entregas que correspondem ao que foi prometido.</div>
+        <div class="campo-nota">Texto provisório. O cliente pode reescrever. A diretriz é transmitir credibilidade pela experiência da equipe, sem citar nomes.</div>
+      </div>
+      <div class="campo-bloco">
+        <div class="campo-label">Dados institucionais (opcional)</div>
+        <div class="campo-valor" id="val-5-2" contenteditable="false">Ano de fundação · Obras entregues · Área construída · Cidades de atuação</div>
+        <div class="campo-nota">Números reais reforçam credibilidade. Usar apenas o que puder confirmar publicamente.</div>
+      </div>
+      <div class="campo-bloco">
+        <div class="campo-label">Imagem</div>
+        <div class="campo-valor" id="val-5-3" contenteditable="false">Foto da equipe em contexto de obra ou de reunião técnica. Profissional, bem iluminada.</div>
+        <div class="campo-nota">Humaniza a marca sem identificar indivíduos. Uma equipe em campo transmite competência de forma visual.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= 06 CONTATO ======= -->
+  <div class="secao-site" id="sec-6">
+    <div class="secao-cabecalho">
+      <div class="secao-cabecalho-esq">
+        <div class="secao-numero">06</div>
+        <div>
+          <span class="secao-nome" id="nome-6" contenteditable="false">Contato</span>
+          <div class="secao-desc">Fecho da página. Convida ao próximo passo com clareza e sem pressão.</div>
+        </div>
+      </div>
+      <div class="secao-acoes" id="acoes-6">
+        <button class="btn-sec" onclick="editarSecao('6')">Editar</button>
+      </div>
+    </div>
+
+    <div class="secao-contexto">
+      <div class="contexto-bloco">
+        <div class="contexto-label">Por que esta seção existe</div>
+        <div class="contexto-texto">O visitante que chegou até aqui já passou por todas as etapas de convencimento. Esta seção precisa facilitar o contato ao máximo: sem formulários longos, sem burocracia. Um botão de WhatsApp bem posicionado converte mais do que qualquer formulário elaborado para o perfil de cliente da BC Lima.</div>
+      </div>
+      <div class="contexto-bloco">
+        <div class="contexto-label">O que o cliente precisa confirmar</div>
+        <ul class="contexto-lista">
+          <li>Número de WhatsApp para contato comercial</li>
+          <li>E-mail da empresa</li>
+          <li>Se quer ou não incluir endereço físico</li>
+          <li>Arroba do Instagram</li>
+          <li>Se prefere formulário de contato ou apenas WhatsApp</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="secao-corpo">
+      <div class="campo-bloco">
+        <div class="campo-label">Título da seção</div>
+        <div class="campo-valor" id="val-6-1" contenteditable="false">Vamos conversar sobre o seu projeto.</div>
+      </div>
+      <div class="campo-bloco">
+        <div class="campo-label">Subtítulo</div>
+        <div class="campo-valor" id="val-6-2" contenteditable="false">Entre em contato para uma conversa inicial sem compromisso.</div>
+      </div>
+      <div class="campo-bloco">
+        <div class="campo-label">WhatsApp</div>
+        <div class="campo-valor" id="val-6-3" contenteditable="false">(11) 94483-6850</div>
+        <div class="campo-nota">Confirme o número. Botão abre o WhatsApp diretamente.</div>
+      </div>
+      <div class="campo-bloco">
+        <div class="campo-label">E-mail</div>
+        <div class="campo-valor" id="val-6-4" contenteditable="false">contato@bclima.com.br</div>
+        <div class="campo-nota">Confirme o e-mail de contato da empresa.</div>
+      </div>
+      <div class="campo-bloco">
+        <div class="campo-label">Endereço</div>
+        <div class="campo-valor" id="val-6-5" contenteditable="false">Rua General Jardim, 645, sala 92B · Vila Buarque · São Paulo, SP · CEP 01223-011</div>
+      </div>
+      <div class="campo-bloco">
+        <div class="campo-label">Instagram</div>
+        <div class="campo-valor" id="val-6-6" contenteditable="false">@bclima.engenharia</div>
+        <div class="campo-nota">Confirme o arroba correto.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <div class="rodape">
+    <img src="https://design.studiosolise.com.br/logos/logo-completo-preto.svg" alt="Studio Solise">
+    <div class="rodape-texto">BC Lima · Estrutura de Site · 2026</div>
+  </div>
+
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+  const camposPorSecao = {
+    '1': ['nome-1','val-1-1','val-1-2','val-1-3','val-1-4'],
+    '2': ['nome-2','val-2-1','val-2-2','val-2-3','val-2-4','val-2-5','val-2-6','val-2-7','val-2-8'],
+    '3': ['nome-3','val-3-1','val-3-2','val-3-3'],
+    '4': ['nome-4','val-4-1','val-4-2','val-4-3','val-4-4','val-4-5','val-4-6'],
+    '5': ['nome-5','val-5-1','val-5-2','val-5-3'],
+    '6': ['nome-6','val-6-1','val-6-2','val-6-3','val-6-4','val-6-5','val-6-6']
+  };
+
+  function editarSecao(id) {
+    camposPorSecao[id].forEach(cid => {
+      const el = document.getElementById(cid);
+      if (el) el.setAttribute('contenteditable', 'true');
+    });
+    document.getElementById('sec-' + id).classList.add('editando-secao');
+    document.getElementById('acoes-' + id).innerHTML = `
+      <button class="btn-sec" onclick="cancelarSecao()">Cancelar</button>
+      <button class="btn-sec primario" onclick="salvarSecao('${id}')">Salvar</button>
+    `;
+    const primeiro = document.getElementById('val-' + id + '-1');
+    if (primeiro) { primeiro.focus(); colocarCursorNoFim(primeiro); }
+  }
+
+  function cancelarSecao() { location.reload(); }
+
+  function salvarSecao(id) {
+    camposPorSecao[id].forEach(cid => {
+      const el = document.getElementById(cid);
+      if (el) el.setAttribute('contenteditable', 'false');
+    });
+    document.getElementById('sec-' + id).classList.remove('editando-secao');
+    document.getElementById('acoes-' + id).innerHTML = `
+      <button class="btn-sec" onclick="editarSecao('${id}')">Editar novamente</button>
+    `;
+    const todos = carregarDados();
+    camposPorSecao[id].forEach(cid => {
+      const el = document.getElementById(cid);
+      if (el) todos[cid] = el.innerHTML;
+    });
+    localStorage.setItem('bclima-estrutura', JSON.stringify(todos));
+    mostrarToast('Alterações salvas.');
+  }
+
+  function carregarDados() {
+    try { return JSON.parse(localStorage.getItem('bclima-estrutura') || '{}'); }
+    catch(e) { return {}; }
+  }
+
+  function mostrarToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('visivel');
+    setTimeout(() => t.classList.remove('visivel'), 2800);
+  }
+
+  function colocarCursorNoFim(el) {
+    const range = document.createRange();
+    range.selectNodeContents(el);
+    range.collapse(false);
+    const sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const dados = carregarDados();
+    Object.keys(dados).forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.innerHTML = dados[id];
+    });
+  });
+</script>
+</body>
+</html>
