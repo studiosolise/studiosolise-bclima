@@ -148,6 +148,35 @@
     .btn-sec.primario { background: var(--cor-preta); color: #fff; border-color: var(--cor-preta); }
     .btn-sec.primario:hover { opacity: 0.8; }
 
+    /* Rodapé da seção */
+    .secao-rodape {
+      padding: 1.25rem 2rem;
+      border-top: 1px solid var(--cor-cinza);
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.5rem;
+      background: #fff;
+    }
+
+    /* Botão de download */
+    .area-download {
+      margin-top: 3rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--cor-cinza);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    .download-texto {
+      font-family: 'Paralucent', sans-serif;
+      font-weight: 200;
+      font-size: 0.85rem;
+      line-height: 1.65;
+      color: var(--cor-texto-sec);
+      max-width: 480px;
+    }
+
     /* Contexto estratégico da seção */
     .secao-contexto {
       padding: 1.75rem 2rem;
@@ -341,9 +370,6 @@
           <div class="secao-desc">Primeira impressão. Define posicionamento em poucas palavras.</div>
         </div>
       </div>
-      <div class="secao-acoes" id="acoes-1">
-        <button class="btn-sec" onclick="editarSecao('1')">Editar</button>
-      </div>
     </div>
 
     <div class="secao-contexto">
@@ -387,6 +413,9 @@
         <div class="campo-nota">Horizontal, alta resolução. Fornecida pela BC Lima.</div>
       </div>
     </div>
+    <div class="secao-rodape" id="rodape-1">
+      <button class="btn-sec" onclick="editarSecao('1')">Editar esta seção</button>
+    </div>
   </div>
 
   <!-- ======= 02 DIFERENCIAIS ======= -->
@@ -398,9 +427,6 @@
           <span class="secao-nome" id="nome-2" contenteditable="false">Diferenciais</span>
           <div class="secao-desc">Por que a BC Lima. Três ou quatro razões concretas para confiar na empresa.</div>
         </div>
-      </div>
-      <div class="secao-acoes" id="acoes-2">
-        <button class="btn-sec" onclick="editarSecao('2')">Editar</button>
       </div>
     </div>
 
@@ -454,6 +480,9 @@
         <div class="campo-valor" id="val-2-8" contenteditable="false">A confirmar com o cliente.</div>
       </div>
     </div>
+    <div class="secao-rodape" id="rodape-2">
+      <button class="btn-sec" onclick="editarSecao('2')">Editar esta seção</button>
+    </div>
   </div>
 
   <!-- ======= 03 SERVIÇOS ======= -->
@@ -465,9 +494,6 @@
           <span class="secao-nome" id="nome-3" contenteditable="false">Serviços</span>
           <div class="secao-desc">O que a empresa oferece. Lista direta, sem excesso de texto.</div>
         </div>
-      </div>
-      <div class="secao-acoes" id="acoes-3">
-        <button class="btn-sec" onclick="editarSecao('3')">Editar</button>
       </div>
     </div>
 
@@ -501,6 +527,9 @@
         <div class="campo-nota">Revise e ajuste conforme a atuação real da empresa. Se algum serviço tiver destaque maior, podemos dar mais espaço a ele no layout.</div>
       </div>
     </div>
+    <div class="secao-rodape" id="rodape-3">
+      <button class="btn-sec" onclick="editarSecao('3')">Editar esta seção</button>
+    </div>
   </div>
 
   <!-- ======= 04 PROJETOS ======= -->
@@ -512,9 +541,6 @@
           <span class="secao-nome" id="nome-4" contenteditable="false">Projetos</span>
           <div class="secao-desc">Portfólio visual. A seção de maior impacto na decisão do cliente.</div>
         </div>
-      </div>
-      <div class="secao-acoes" id="acoes-4">
-        <button class="btn-sec" onclick="editarSecao('4')">Editar</button>
       </div>
     </div>
 
@@ -565,6 +591,9 @@
         <div class="campo-valor" id="val-4-6" contenteditable="false">Nome do projeto · tipo · cidade</div>
       </div>
     </div>
+    <div class="secao-rodape" id="rodape-4">
+      <button class="btn-sec" onclick="editarSecao('4')">Editar esta seção</button>
+    </div>
   </div>
 
   <!-- ======= 05 SOBRE ======= -->
@@ -576,9 +605,6 @@
           <span class="secao-nome" id="nome-5" contenteditable="false">Sobre a empresa</span>
           <div class="secao-desc">Quem está por trás da BC Lima. Credibilidade pela trajetória, sem expor nomes.</div>
         </div>
-      </div>
-      <div class="secao-acoes" id="acoes-5">
-        <button class="btn-sec" onclick="editarSecao('5')">Editar</button>
       </div>
     </div>
 
@@ -624,6 +650,9 @@
         <div class="campo-nota">Humaniza a marca sem identificar indivíduos. Uma equipe em campo transmite competência de forma visual.</div>
       </div>
     </div>
+    <div class="secao-rodape" id="rodape-5">
+      <button class="btn-sec" onclick="editarSecao('5')">Editar esta seção</button>
+    </div>
   </div>
 
   <!-- ======= 06 CONTATO ======= -->
@@ -635,9 +664,6 @@
           <span class="secao-nome" id="nome-6" contenteditable="false">Contato</span>
           <div class="secao-desc">Fecho da página. Convida ao próximo passo com clareza e sem pressão.</div>
         </div>
-      </div>
-      <div class="secao-acoes" id="acoes-6">
-        <button class="btn-sec" onclick="editarSecao('6')">Editar</button>
       </div>
     </div>
 
@@ -687,6 +713,15 @@
         <div class="campo-nota">Confirme o arroba correto.</div>
       </div>
     </div>
+    <div class="secao-rodape" id="rodape-6">
+      <button class="btn-sec" onclick="editarSecao('6')">Editar esta seção</button>
+    </div>
+  </div>
+
+  <!-- Download -->
+  <div class="area-download">
+    <div class="download-texto">Quando todas as seções estiverem revisadas, baixe o arquivo com o conteúdo consolidado para entregar ao Studio Solise.</div>
+    <button class="btn-sec primario" onclick="baixarEstrutura()">Baixar estrutura</button>
   </div>
 
   <!-- Rodapé -->
@@ -749,7 +784,7 @@
       if (el) el.setAttribute('contenteditable', 'true');
     });
     document.getElementById('sec-' + id).classList.add('editando-secao');
-    document.getElementById('acoes-' + id).innerHTML = `
+    document.getElementById('rodape-' + id).innerHTML = `
       <button class="btn-sec" onclick="cancelarSecao()">Cancelar</button>
       <button class="btn-sec primario" id="btn-salvar-${id}" onclick="salvarSecao('${id}')">Salvar</button>
     `;
@@ -764,7 +799,6 @@
     btn.disabled = true;
     btn.textContent = 'Salvando...';
 
-    // Coleta o conteúdo editado desta seção
     camposPorSecao[id].forEach(cid => {
       const el = document.getElementById(cid);
       if (el) dadosNuvem[cid] = el.innerHTML;
@@ -785,9 +819,34 @@
       if (el) el.setAttribute('contenteditable', 'false');
     });
     document.getElementById('sec-' + id).classList.remove('editando-secao');
-    document.getElementById('acoes-' + id).innerHTML = `
-      <button class="btn-sec" onclick="editarSecao('${id}')">Editar novamente</button>
+    document.getElementById('rodape-' + id).innerHTML = `
+      <button class="btn-sec" onclick="editarSecao('${id}')">Editar esta seção</button>
     `;
+  }
+
+  function baixarEstrutura() {
+    const exportar = {};
+    Object.keys(camposPorSecao).forEach(secId => {
+      const nomeEl = document.getElementById('nome-' + secId);
+      exportar['secao_' + secId] = {
+        nome: nomeEl ? nomeEl.textContent.trim() : ''
+      };
+      camposPorSecao[secId].forEach(cid => {
+        if (cid.startsWith('val-')) {
+          const el = document.getElementById(cid);
+          if (el) exportar['secao_' + secId][cid] = el.innerText.trim();
+        }
+      });
+    });
+
+    const blob = new Blob([JSON.stringify(exportar, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'estrutura-bclima.json';
+    a.click();
+    URL.revokeObjectURL(url);
+    mostrarToast('Download iniciado.');
   }
 
   function mostrarToast(msg) {
